@@ -108,7 +108,3 @@
 - mod_jk 방식으로 Apache-Tomcat 상호연동
 - mod_jk 방식으로 이중화 구성
 - 로드밸런싱을 이용하여 두 개의 인스턴스 중 하나가 죽더라도 다른 하나가 실행중이라면 계속해서 실행됨
-
-vim /opt/tomcat/instance1/conf/server.xml
-
-vim /opt/apache-2.4.58/conf/

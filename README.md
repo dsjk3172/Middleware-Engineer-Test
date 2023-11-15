@@ -4,6 +4,7 @@
    
 1. Linux 기본 환경 구성   
     
+
    
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/a93150c0-d4ef-4f18-85f7-a9013fe8acaf)
    

@@ -1,0 +1,84 @@
+ABOUT
+-----
+
+This is the ISAPI redirector (IIS plug-in) that enables IIS to pass selected
+requests to Tomcat over the AJP protocol.
+
+
+REQUIREMENT
+-----------
+
+To build the ISAPI redirector you will need to create the following build
+environment:
+
+- Git client
+- Mladen's Custom Microsoft Compiler Toolkit Compilation  
+    https://github.com/mturk/cmsc/releases/tag/v15.0.28
+    download cmsc-15.0_28-win7-x86_x64.zip and unzip in C:
+
+
+BUILDING
+--------
+
+Obtain the source code:
+
+  git clone https://github.com/apache/tomcat-connectors.git
+  cd tomcat-connectors\native\iis
+
+
+Build  isapi_redirector.dll:
+
+    c:\cmsc-15.0_28\setenv.bat x86
+    nmake -f Makefile.vc
+
+    open new cmd.exe
+
+    c:\cmsc-15.0_28\setenv.bat x64
+    nmake -f Makefile.vc
+
+Tomcat isapi_redirect DLLs may then be found in
+    tomcat-connectors\native\iis\[x86|x64]_RELEASE
+
+
+
+RELEASING
+---------
+
+Construct the binary distributions    
+
+  set VER=1.2.49
+  mkdir tomcat-connectors-%VER%-windows-i386-iis
+  copy ..\LICENSE tomcat-connectors-%VER%-windows-i386-iis\
+  copy ..\NOTICE tomcat-connectors-%VER%-windows-i386-iis\
+  copy README tomcat-connectors-%VER%-windows-i386-iis\
+  copy Release_x86\isapi_redirect.dll tomcat-connectors-%VER%-windows-i386-iis\
+  mkdir tomcat-connectors-%VER%-windows-x86_64-iis
+  copy ..\LICENSE tomcat-connectors-%VER%-windows-x86_64-iis\
+  copy ..\NOTICE tomcat-connectors-%VER%-windows-x86_64-iis\
+  copy README tomcat-connectors-%VER%-windows-x86_64-iis\
+  copy Release_amd64\isapi_redirect.dll tomcat-connectors-%VER%-windows-x86_64-iis\
+  mkdir tomcat-connectors-%VER%-windows-i386-symbols
+  copy ..\LICENSE tomcat-connectors-%VER%-windows-i386-symbols
+  copy ..\NOTICE tomcat-connectors-%VER%-windows-i386-symbols
+  copy README tomcat-connectors-%VER%-windows-i386-symbols\
+  copy Release_x86\isapi_redirect.pdb tomcat-connectors-%VER%-windows-i386-symbols\
+  mkdir tomcat-connectors-%VER%-windows-x86_64-symbols
+  copy ..\LICENSE tomcat-connectors-%VER%-windows-x86_64-symbols
+  copy ..\NOTICE tomcat-connectors-%VER%-windows-x86_64-symbols
+  copy README tomcat-connectors-%VER%-windows-x86_64-symbols\
+  copy Release_amd64\isapi_redirect.pdb tomcat-connectors-%VER%-windows-x86_64-symbols\
+  SET JAVA_HOME=C:\Program Files\Java\jdk1.7.0_71   
+  set PATH=%PATH%;%JAVA_HOME%\bin
+  cd tomcat-connectors-%VER%-windows-i386-iis
+  jar -cMf ..\tomcat-connectors-%VER%-windows-i386-iis.zip *
+  cd ..\tomcat-connectors-%VER%-windows-x86_64-iis
+  jar -cMf ..\tomcat-connectors-%VER%-windows-x86_64-iis.zip *
+  cd ..\tomcat-connectors-%VER%-windows-i386-symbols
+  jar -cMf ..\tomcat-connectors-%VER%-windows-i386-symbols.zip *
+  cd ..\tomcat-connectors-%VER%-windows-x86_64-symbols
+  jar -cMf ..\tomcat-connectors-%VER%-windows-x86_64-symbols.zip *
+ 
+The Windows binary distributions may then be found in
+C:\tomcat-jk-1.2.x\native\iis
+
+These need to be signed and hashed before uploading for the release vote.

@@ -1,0 +1,14 @@
+#! /bin/sh
+#
+# Created by configure
+
+"./configure" \
+"--prefix=/opt/apache-2.4.58" \
+"--enable-module=so" \
+"--enable-rewrite" \
+"--enable-so" \
+"--with-apr=/opt/apr" \
+"--with-apr-util=/opt/apr-util" \
+"--with-pcre=/opt/pcre/bin/pcre-config" \
+"--enable-mods-shared=all" \
+"$@"

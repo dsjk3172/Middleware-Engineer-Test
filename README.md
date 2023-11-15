@@ -10,8 +10,8 @@
 - SSH 접속 터미널: MobaXterm
 - ip : [13.124.217.49:](http://13.124.217.49/)(현재 접속 가능)
    
--- 문제점 : wasadmin 계정 생성시 접속 문제 발생   
--- 해결 : 같은 keypair로 로그인 할 수 있도록 ubuntu 의 ./ssh 디렉토리를 wasdamin 계정으로 복사하고 권한 부여   
+* 문제점 : wasadmin 계정 생성시 접속 문제 발생   
+* 해결 : 같은 keypair로 로그인 할 수 있도록 ubuntu 의 ./ssh 디렉토리를 wasdamin 계정으로 복사하고 권한 부여   
       -- cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/   
       -- chown -R wasadmin:wasadmin /home/wasadmin/.ssh   
 

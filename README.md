@@ -15,7 +15,7 @@
 
 1. JDK 환경 구성
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/16110c6b-1cea-4e64-8902-8ea5643d5ee1/756ec067-c75b-4109-801f-9394871f99f9/Untitled.png)
+![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F756ec067-c75b-4109-801f-9394871f99f9%2FUntitled.png?table=block&id=ceee6651-a153-44d2-836f-e6244eb625f6&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1740&userId=&cache=v2)
 
 - Oracle JDK 17.0.9 버전 설치(패키지 설치 X)
 - Directory: /opt/jdk-17.0.9/
@@ -23,19 +23,19 @@
 1. Apache Tomcat 환경 구성(멀티 인스턴스 구축)
 - instance1
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/16110c6b-1cea-4e64-8902-8ea5643d5ee1/7a742d50-e6d9-4405-bf74-9f46e6aa5abe/Untitled.png)
+![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F7a742d50-e6d9-4405-bf74-9f46e6aa5abe%2FUntitled.png?table=block&id=bd2e90d3-af75-46dd-a0e4-7b85946d4a8e&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
 - instance2
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/16110c6b-1cea-4e64-8902-8ea5643d5ee1/331f73c5-b277-4ac4-9457-e8539c9eb2a1/Untitled.png)
+![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F331f73c5-b277-4ac4-9457-e8539c9eb2a1%2FUntitled.png?table=block&id=c3ab33e1-317c-44de-b16a-efbbb64f881e&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
 - 8080 포트로 접속한 화면
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/16110c6b-1cea-4e64-8902-8ea5643d5ee1/19916bde-a2b6-4f54-9a17-f3e2209fddde/Untitled.png)
+![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F19916bde-a2b6-4f54-9a17-f3e2209fddde%2FUntitled.png?table=block&id=bc71495c-25ad-4cae-ae5e-d1bc047c28ac&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1880&userId=&cache=v2)
 
 - 9080 포트로 접속한 화면
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/16110c6b-1cea-4e64-8902-8ea5643d5ee1/94e12ae9-d5fd-4fc4-ab4f-1c6364e028c3/Untitled.png)
+![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F94e12ae9-d5fd-4fc4-ab4f-1c6364e028c3%2FUntitled.png?table=block&id=62e40559-750b-48c3-a341-45aba229c9d2&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
 - Apache Tomcat 9.0.82를 사용하여 시스템 구축
 - Instance1 Directory : /opt/tomcat/instance1/
@@ -55,7 +55,7 @@
 
 1. 샘플 애플리케이션 배포(애플리케이션 only)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/16110c6b-1cea-4e64-8902-8ea5643d5ee1/86d1edca-7741-46d2-adad-42b24861154d/Untitled.png)
+![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F86d1edca-7741-46d2-adad-42b24861154d%2FUntitled.png?table=block&id=d238b6db-d1ff-44a9-9c4e-6f4a4e6116c6&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
 - https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/에서 배포하는 샘플 애플리케이션을 사용
 

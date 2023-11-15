@@ -1,4 +1,4 @@
-![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/831caa4d-7f5d-4708-b9e9-bb0520087ace)# Open-Source-Consulting   
+Open-Source-Consulting   
    
 
 

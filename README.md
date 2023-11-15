@@ -24,6 +24,7 @@
 
 - Oracle JDK 17.0.9 버전 설치(패키지 설치 X)
 - Directory: /opt/jdk-17.0.9/
+-----
 
 3. Apache Tomcat 환경 구성(멀티 인스턴스 구축)
 - instance1
@@ -57,12 +58,14 @@
     - /opt/tomcat/instance1/bin/shutdown.sh
     - /opt/tomcat/instance2/bin/shutdown.sh
     - /opt/apache-2.4.58/bin/httpd -k stop
+-----
 
 4. 샘플 애플리케이션 배포(애플리케이션 only)
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F86d1edca-7741-46d2-adad-42b24861154d%2FUntitled.png?table=block&id=d238b6db-d1ff-44a9-9c4e-6f4a4e6116c6&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
 - https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/ 에서 배포하는 샘플 애플리케이션을 사용
+-----
 
 5. Apache HTTP 환경 구성(컴파일 형태로 설치)
 - apache-2.4.58 폴더
@@ -84,6 +87,7 @@
 - Apache 2.4.58 version 설치
 - APR, PCRE와 같은 의존성 패키지는 /opt/에 설치
 - Directory : /opt/apache-2.4.58
+-----
 
 6. Apache ↔ Tomcat 연동 환경 구성(mod_jk 연동)<이중화 Fail-over>
 - 설치된 모듈들

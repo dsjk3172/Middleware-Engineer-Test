@@ -11,7 +11,7 @@
 
           
 
-- 환경: AWS EC2, ubuntu 22.04.3 LTS 사용
+- 환경: AWS EC2, ubuntu 22.04.3 LTS 사용   
 - wasadmin 계정 사용
 - ip : [13.124.217.49:](http://13.124.217.49/)(현재 접속 가능)
 

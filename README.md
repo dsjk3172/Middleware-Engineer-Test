@@ -34,7 +34,7 @@
 
 3. Apache Tomcat 환경 구성(멀티 인스턴스 구축)   
 - Apache Tomcat 9.0.82를 사용하여 시스템 구축
-   
+-----
 - instance1
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F7a742d50-e6d9-4405-bf74-9f46e6aa5abe%2FUntitled.png?table=block&id=bd2e90d3-af75-46dd-a0e4-7b85946d4a8e&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
@@ -45,7 +45,7 @@
 
 - Instance1 Directory : /opt/tomcat/instance1/
 - Instance2 Directory : /opt/tomcat/instance2/
-
+-----
 - 8080 포트로 접속한 화면
 
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/43f1e40d-3e51-4ff9-8a2a-52fcb50a1323)

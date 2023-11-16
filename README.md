@@ -75,6 +75,9 @@
 
 - https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/ 에서 배포하는 샘플 애플리케이션을 사용
 -----
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/b2b3112d-9d70-444b-923b-aab4187c72b8)
+- The easiest way to run this application is simply to move the war file to your CATALINA_HOME/webapps directory
+-----
 
 5. Apache HTTP 환경 구성(컴파일 형태로 설치)
 - apache-2.4.58 폴더

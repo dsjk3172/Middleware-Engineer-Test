@@ -115,12 +115,14 @@
 6. Apache ↔ Tomcat 연동 환경 구성(mod_jk 연동)<이중화 Fail-over>
 - mod_jk 컴파일 설치
   - configure 명령어를 이용해서 make 파일 생성
-  - [apache@localhost ~]# cd /home/apache/tomcat-connectors-1.2.46-src/native
-  - [apache@localhost native]# ./configure --with-apxs=/sw/httpd-2.4.39/bin/apxs
+  - cd /home/wasdamin/tomcat-connectors-1.2.49-src/native
+  - ./configure --with-apxs=/opt/apache-2.4.58/bin/apxs
+  - make && make install
 -----
 - 설치된 모듈들
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2Fa09ca6a3-a3d8-4a7c-aa8a-fcab9a739794%2FUntitled.png?table=block&id=0c6fddef-cb81-4b3a-8cf1-c8784ac2ace4&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1250&userId=&cache=v2)
+-----
 
 - tomcat instance1의 server.xml의 일부
 

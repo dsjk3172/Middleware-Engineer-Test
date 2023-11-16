@@ -43,7 +43,7 @@
 
 - 8080 포트로 접속한 화면
 
-![Untitled](![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/43f1e40d-3e51-4ff9-8a2a-52fcb50a1323))
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/43f1e40d-3e51-4ff9-8a2a-52fcb50a1323)
 
 - 9080 포트로 접속한 화면
 

@@ -43,7 +43,7 @@
 
 - 8080 포트로 접속한 화면
 
-![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F19916bde-a2b6-4f54-9a17-f3e2209fddde%2FUntitled.png?table=block&id=bc71495c-25ad-4cae-ae5e-d1bc047c28ac&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1880&userId=&cache=v2)
+![Untitled](![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/43f1e40d-3e51-4ff9-8a2a-52fcb50a1323))
 
 - 9080 포트로 접속한 화면
 

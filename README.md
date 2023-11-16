@@ -33,6 +33,7 @@
 
 
 3. Apache Tomcat 환경 구성(멀티 인스턴스 구축)
+- Apache Tomcat 9.0.82를 사용하여 시스템 구축
 - instance1
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F7a742d50-e6d9-4405-bf74-9f46e6aa5abe%2FUntitled.png?table=block&id=bd2e90d3-af75-46dd-a0e4-7b85946d4a8e&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
@@ -40,6 +41,9 @@
 - instance2
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F331f73c5-b277-4ac4-9457-e8539c9eb2a1%2FUntitled.png?table=block&id=c3ab33e1-317c-44de-b16a-efbbb64f881e&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
+
+- Instance1 Directory : /opt/tomcat/instance1/
+- Instance2 Directory : /opt/tomcat/instance2/
 
 - 8080 포트로 접속한 화면
 
@@ -49,9 +53,6 @@
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F94e12ae9-d5fd-4fc4-ab4f-1c6364e028c3%2FUntitled.png?table=block&id=62e40559-750b-48c3-a341-45aba229c9d2&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
-- Apache Tomcat 9.0.82를 사용하여 시스템 구축
-- Instance1 Directory : /opt/tomcat/instance1/
-- Instance2 Directory : /opt/tomcat/instance2/
 - Instance1은 HTTP 포트 8080, AJP 포트 8009로 구성
 - Instance2는 HTTP 포트 9080, AJP 포트 9009로 구성
 -----

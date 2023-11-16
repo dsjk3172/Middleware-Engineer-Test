@@ -54,6 +54,7 @@
 - Instance2 Directory : /opt/tomcat/instance2/
 - Instance1은 HTTP 포트 8080, AJP 포트 8009로 구성
 - Instance2는 HTTP 포트 9080, AJP 포트 9009로 구성
+-----
 
 - 인스턴트 시작
     - /opt/tomcat/instance1/bin/startup.sh

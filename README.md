@@ -26,6 +26,11 @@
 - Oracle JDK 17.0.9 버전 설치(패키지 설치 X)
 - Directory: /opt/jdk-17.0.9/
 -----
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/162dd3cd-fb9e-4f29-85a0-c24c82f83307)
+   
+- /etc/profile에 환경변수 추가
+-----
+
 
 3. Apache Tomcat 환경 구성(멀티 인스턴스 구축)
 - instance1

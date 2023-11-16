@@ -103,6 +103,7 @@
 - 설치 과정에서 발생한 문제들
    1. error : no acceptable C compiler found in $PATH
       - 해결 : C 컴파일러 gcc 설치(sudo apt-get install build-essential)
+   2.
 
 -----
 

@@ -100,6 +100,14 @@
 - APR, PCRE와 같은 의존성 패키지는 /opt/에 설치
 - Directory : /opt/apache-2.4.58
 -----
+- 설치 방법
+  - apr 설치
+    - cd /opt/apache_package/apr-1.7.4/
+    - ./configure --prefix=/opt/apr
+    - make
+    - make install
+
+-----
 - 설치 과정에서 발생한 문제들
    1. error : no acceptable C compiler found in $PATH
       - 해결법 : C 컴파일러 gcc 설치(sudo apt-get install build-essential)

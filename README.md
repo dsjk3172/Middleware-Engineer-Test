@@ -35,6 +35,7 @@
 3. Apache Tomcat 환경 구성(멀티 인스턴스 구축)   
 - Apache Tomcat 9.0.82를 사용하여 시스템 구축
 -----
+
 - instance1
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F7a742d50-e6d9-4405-bf74-9f46e6aa5abe%2FUntitled.png?table=block&id=bd2e90d3-af75-46dd-a0e4-7b85946d4a8e&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
@@ -46,6 +47,7 @@
 - Instance1 Directory : /opt/tomcat/instance1/
 - Instance2 Directory : /opt/tomcat/instance2/
 -----
+
 - 8080 포트로 접속한 화면
 
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/43f1e40d-3e51-4ff9-8a2a-52fcb50a1323)
@@ -75,6 +77,7 @@
 
 - https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/ 에서 배포하는 샘플 애플리케이션을 사용
 -----
+
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/b2b3112d-9d70-444b-923b-aab4187c72b8)
 - The easiest way to run this application is simply to move the war file to your CATALINA_HOME/webapps directory
 -----
@@ -100,14 +103,35 @@
 - APR, PCRE와 같은 의존성 패키지는 /opt/에 설치
 - Directory : /opt/apache-2.4.58
 -----
-- 설치 방법
+
+- 설치 과정
   - apr 설치
-    - cd /opt/apache_package/apr-1.7.4/
+    - cd /opt/apache_package/apr-1.7.4
     - ./configure --prefix=/opt/apr
     - make
     - make install
-
+  - apr-util 설치
+    - cd /opt/apache_package/apr-util-1.6.3
+    - ./configure --with-apr=/opt/apr --prefix=/opt/apr-util 
+    - make
+    - make install
+  - PCRE 설치
+    - /opt/apache_package/pcre-8.45
+    - ./configure --prefix=/opt/pcre
+    - make
+    - make install
+  - Apache HTTP 설치
+    - $ cd /opt/apache_package/httpd-2.4.58/
+    - ./configure --prefix=/opt/apache-2.4.58 \
+    - --enable-module=so --enable-rewrite --enable-so \
+    - --with-apr=/opt/apr \
+    - --with-apr-util=/opt/apr-util \
+    - --with-pcre=/opt/pcre/bin/pcre-config \
+    - --enable-mods-shared=all
+    - make
+    - make install
 -----
+
 - 설치 과정에서 발생한 문제들
    1. error : no acceptable C compiler found in $PATH
       - 해결법 : C 컴파일러 gcc 설치(sudo apt-get install build-essential)
@@ -117,7 +141,6 @@
    
    3. error : Makefile:48: recipe for target 'htpasswd' failed
       - 해결법 : apr-util 을 삭제하고 다시 설치
-
 -----
 
 6. Apache ↔ Tomcat 연동 환경 구성(mod_jk 연동)<이중화 Fail-over>
@@ -127,6 +150,7 @@
   - ./configure --with-apxs=/opt/apache-2.4.58/bin/apxs
   - make && make install
 -----
+
 - 설치된 모듈들
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2Fa09ca6a3-a3d8-4a7c-aa8a-fcab9a739794%2FUntitled.png?table=block&id=0c6fddef-cb81-4b3a-8cf1-c8784ac2ace4&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1250&userId=&cache=v2)

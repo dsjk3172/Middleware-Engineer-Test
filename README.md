@@ -167,9 +167,16 @@
    
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/2d9e3020-1725-40d1-9d3d-0106abc2c32b)
 -----
+
 - workers.properties
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F96884f31-5580-4131-b94b-f8ebeecb0598%2FUntitled.png?table=block&id=f78cf22f-388e-4ff6-8d33-5391c8ee178f&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=800&userId=&cache=v2)
+-----
+
+- uriworkermap.properties
+
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/7fe99047-9852-43eb-a5fa-0bbff360d639)
+
 -----
 
 - tomcat instance1의 server.xml의 일부

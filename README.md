@@ -100,6 +100,11 @@
 - APR, PCRE와 같은 의존성 패키지는 /opt/에 설치
 - Directory : /opt/apache-2.4.58
 -----
+- 설치 과정에서 발생한 문제들
+   1. error : no acceptable C compiler found in $PATH
+      - 해결 : C 컴파일러 gcc 설치(sudo apt-get install build-essential)
+
+-----
 
 6. Apache ↔ Tomcat 연동 환경 구성(mod_jk 연동)<이중화 Fail-over>
 - 설치된 모듈들

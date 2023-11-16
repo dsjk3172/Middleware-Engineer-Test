@@ -103,7 +103,9 @@
 - 설치 과정에서 발생한 문제들
    1. error : no acceptable C compiler found in $PATH
       - 해결 : C 컴파일러 gcc 설치(sudo apt-get install build-essential)
-   2.
+   
+   2. error : xml/apr_xml.c:35:10: fatal error: expat.h : No such file or directory
+      - 해결 : libexpat-dev 설치(apt-get install libexpat1-dev)
 
 -----
 

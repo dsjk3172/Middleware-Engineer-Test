@@ -302,7 +302,6 @@ export PATH
    $ ./configure --with-apxs=/opt/apache-2.4.58/bin/apxs
    $ make && make install
 ```
------
      
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/7c7da78f-458f-44de-b010-ad4785d65a68)
 - 여기서 mod_jk.so가 있다면 설치에 성공한 것입니다.
@@ -310,16 +309,27 @@ export PATH
    $ /opt/apache-2.4.58/modules/
    $ ls
 ```
+### 이제 설치한 mod_jk를 로드하도록 설정을 수정해보겠습니다.
 
-![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2Fa09ca6a3-a3d8-4a7c-aa8a-fcab9a739794%2FUntitled.png?table=block&id=0c6fddef-cb81-4b3a-8cf1-c8784ac2ace4&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1250&userId=&cache=v2)
------
 
-- /opt/apache-2.4.58/conf/httpd.conf 파일 중 일부
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/4608a9ea-234c-481b-95f1-05fb9a9fb684)
-   
+- /opt/apache-2.4.58/conf/httpd.conf 파일을 편집합니다.
+```
+   $ vim /opt/apache-2.4.58/conf/httpd.conf
+```
+- 위 사진처럼 LoadModule jk_module modules/mod_jk.so라는 문장을 추가해주세요.
+   - mod_jk.so를 Load하라는 명령입니다.
+  
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/96876d08-f740-4a99-8f78-9dd29805bd44)
------
+- 위 사진처럼 아래 문장을 추가해주세요.
+   - 실행할 때 mod_jk.conf를 참고하라는 명령입니다.
+```
+<IfModule jk_module>
+include conf/mod_jk.conf
+</IfModule>
+```
 
+### 여기까지 했으면 이제 mod_jk.conf를 생성해줍니다.
 - mod_jk.conf
    
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/2d9e3020-1725-40d1-9d3d-0106abc2c32b)

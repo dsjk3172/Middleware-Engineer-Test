@@ -16,8 +16,9 @@
 ### 저는 먼저 wasadmin이라는 계정을 만들어 보겠습니다.
 - 우분투에서 wasadmin이라는 계정을 생성합니다
    - $ adduser wasadmin
-- 저는 지금 아마존 ec2를 사용하고 있기 때문에 이 만들어진 계정으로 접속하기 위해서는 keypair를 복사한 뒤 권한을 부여해 주어야 합니다.
-   - $ cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/  
+- 저는 지금 아마존 ec2를 사용하고 있기 때문에 이 만들어진 계정으로 접속하기 위해서는 keypair를 복사해 주어야 합니다.
+   - $ cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/   
+- 복사한 keypair의 권한을 ubuntu에서 wasadmin으로 변경해줍니다.
    - $ chown -R wasadmin:wasadmin /home/wasadmin/.ssh   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5e21b6c9-bc5a-4121-9012-ece3c6fafdf0)   
 - cut -f1 -d: /etc/passwd 명령을 통해 wasadmin이라는 계정을 생성된 것을 확인할 수 있습니다
@@ -59,16 +60,17 @@
 - /etc/profile을 편집합니다.
    - $ vim /etc/profile
    
-JAVA_HOME=/opt/jdk-17.0.9
-JRE_HOME=/opt/jdk-17.0.9
-PATH=$PATH:$JRE_HOME/bin:$JAVA_HOME/bin
-
-export JAVA_HOME
-export JRE_HOME
-export PATH
+JAVA_HOME=/opt/jdk-17.0.9   
+JRE_HOME=/opt/jdk-17.0.9   
+PATH=$PATH:$JRE_HOME/bin:$JAVA_HOME/bin   
+   
+export JAVA_HOME   
+export JRE_HOME   
+export PATH   
    
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/162dd3cd-fb9e-4f29-85a0-c24c82f83307)
-이 문장들을 profile에 입력해주세요.
+
+- 위의 문장들을 위의 사진처럼 /etc/profile에 추가해주세요.
 -----
 
 

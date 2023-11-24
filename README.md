@@ -3,7 +3,7 @@
 ## 들어가며
 안녕하세요. 신입 개발자 이시현입니다.   
 이 페이지는 AWS EC2를 이용하여 미들웨어를 구축하는 과정을 설명한 페이지입니다.   
-현재 만들어진 페이지는 [13.124.217.49](http://13.124.217.49/)로 접속 가능한 상태입니다.
+만들어진 페이지는 [13.124.217.49](http://13.124.217.49/)에서 확인이 가능합니다.
 
 ## 1. Linux 기본 환경 구성
 
@@ -13,16 +13,15 @@
 ![제목 없음](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F43bfc1cc-6660-4007-8a8c-32d94dfeec3f%2FUntitled.png?table=block&id=9c211ec0-9d0a-492e-a029-b0d7110475b3&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1910&userId=&cache=v2)
 
 ### 아마존 EC2의 경우 기본적으로 이렇게 ubuntu 22.04.3 LTS를 제공합니다.
-- 환경: AWS EC2, ubuntu 22.04.3 LTS 사용
-- wasadmin 계정 사용
-- SSH 접속 터미널: MobaXterm
-- ip : [13.124.217.49](http://13.124.217.49/)(현재 접속 가능)
------
-
-- 문제점 : wasadmin 계정 생성시 접속 문제 발생
-- 해결 : 같은 keypair로 로그인 할 수 있도록 ubuntu 의 ./ssh 디렉토리를 wasdamin 계정으로 복사하고 권한 부여
-    - cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/   
-    - chown -R wasadmin:wasadmin /home/wasadmin/.ssh   
+### 저희는 먼저 wasadmin을 만들어 보겠습니다.
+- 우분투에서 wasadmin이라는 계정을 생성합니다
+   - adduser wasadmin
+- 저희는 지금 아마존 ec2를 사용하고 있기 때문에 이 만들어진 계정으로 접속하기 위해서는 keypair를 복사해주어야 합니다.
+   - cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/  
+   - chown -R wasadmin:wasadmin /home/wasadmin/.ssh
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5e21b6c9-bc5a-4121-9012-ece3c6fafdf0)   
+- cut -f1 -d: /etc/passwd 명령을 통해 wasadmin이라는 계정을 생성된 것을 확인할 수 있습니다
+   
 -----
 
 2. JDK 환경 구성

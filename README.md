@@ -60,9 +60,11 @@
 
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/026d594e-7e36-46d3-9d38-5c313310e7f1)
 
-- 우선 Oracle 사이트에서 자바 JDK를 다운받습니다. 위 사진은 제가 다운받은 파일입니다.
+- 먼저 Oracle 사이트에서 자바 JDK를 다운받습니다.
 - 다운받은 파일의 압축을 풉니다.
-   - $ tar zxvf jdk-17_linux-x64_bin.tar.gz(파일명)
+```
+   $ tar zxvf jdk-17_linux-x64_bin.tar.gz(파일명)
+```
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F756ec067-c75b-4109-801f-9394871f99f9%2FUntitled.png?table=block&id=ceee6651-a153-44d2-836f-e6244eb625f6&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1740&userId=&cache=v2)
 
@@ -72,20 +74,26 @@
 ### 다음은 환경변수를 추가하는 과정입니다.
 ### 이 과정을 거쳐야 리눅스 내에서 JDK를 인식하고 사용할 수 있습니다.
    
-- /etc/profile을 편집합니다.
-   - $ vim /etc/profile
-   
+- profile을 vim을 통해 열어줍니다.
+```
+   $ vim /etc/profile
+```
+
+- 아래 문장들을 profile에 추가합니다.
+```
 JAVA_HOME=/opt/jdk-17.0.9   
 JRE_HOME=/opt/jdk-17.0.9   
 PATH=$PATH:$JRE_HOME/bin:$JAVA_HOME/bin   
    
 export JAVA_HOME   
 export JRE_HOME   
-export PATH   
+export PATH
+```
    
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/162dd3cd-fb9e-4f29-85a0-c24c82f83307)
 
-- 위의 문장들을 위의 사진처럼 /etc/profile에 추가해주세요.
+- 추가하였다면 Exc 버튼을 누른 뒤 :wq를 입력하여 vim을 종료해주세요.
+- 위의 profile이 위의 사진처럼 되어야 합니다.
 
 ### 여기까지 했으면 JDK 설치는 완료되었습니다.
 -----

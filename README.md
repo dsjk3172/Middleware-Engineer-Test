@@ -128,8 +128,29 @@ export PATH
 
 - 위 사진들처럼 instance1과 instance2가 만들어졌다면 성공입니다.
 -----
+### 이제 멀티 인스턴스 구축을 위해 instance1과 instance2의 포트를 수정하겠습니다.
 
-- 8080 포트로 접속한 화면
+- vim으로 instance1의 server.xml 파일을 열어주세요.
+```
+   $ vim /opt/tomcat/instance1/conf/server.xml
+```
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/c3fdbb5a-7257-4f31-8c93-3dc3869aa2c8)
+
+- 위의 사진처럼 vim의 AJP 부분을 편집하여 AJP를 활성화 시켜주세요.
+
+### 이번에는 instance2의 server.xml을 편집하겠습니다.
+
+- vim으로 instance2의 server.xml 파일을 열어주세요.
+```
+   $ vim /opt/tomcat/instance2/conf/server.xml
+```
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/d79e6672-232d-49e4-bfce-907c76356cd6)
+-----
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/e8ad0aff-5aaa-49dd-b6ef-44011fc8f86c)
+-----
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/96a52d77-fa72-41db-8863-e681df697014)
+
+- instance2의 경우 instance1과의 포트 충돌을 막기 위해 위 사진들처럼 기존 포트들에 모두 1000씩 더해주세요.
 
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/43f1e40d-3e51-4ff9-8a2a-52fcb50a1323)
 

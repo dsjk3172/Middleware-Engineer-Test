@@ -206,9 +206,16 @@ export PATH
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F29ed0736-6ef6-4554-a2f3-96b24d93e175%2FUntitled.png?table=block&id=bd7c2942-b00c-4266-8597-f1912c614aba&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=310&userId=&cache=v2)
 
-- 우선 설치에 사용할 패키지 파일들을 다운받습니다.
+- 우선 설치에 사용할 파일들을 다운받습니다.
    - 다운받을 파일은 Apache HTTP와 의존성 패키지인 apr, apr-util, pcre입니다
    - 저는 이 파일들을 /opt/apache_package에 다운받았습니다.
+
+- 다운받은 파일들을 압축해제하여 주세요.
+```
+   $ tar -zvxf (파일명)
+```
+
+### 이제 패키지들을 하나씩 설치해봅시다.
 
 - apache-2.4.58 폴더
 

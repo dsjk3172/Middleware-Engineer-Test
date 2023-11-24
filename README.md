@@ -253,12 +253,12 @@ export PATH
       ```
          apt-get install build-essential
       ```
-   - error : xml/apr_xml.c:35:10: fatal error: expat.h : No such file or directory
+  - error : xml/apr_xml.c:35:10: fatal error: expat.h : No such file or directory
     - 해결법 : C 컴파일러 gcc 설치
       ```
          apt-get install build-essential
       ```
-   - error : libexpat-dev 설치(apt-get install libexpat1-dev)
+  - error : libexpat-dev 설치(apt-get install libexpat1-dev)
     - 해결법 : apr-util 을 삭제하고 다시 설치
  
 
@@ -289,17 +289,6 @@ export PATH
     - --enable-mods-shared=all
     - make
     - make install
------
-
-- 설치 과정에서 발생한 문제들
-   1. error : no acceptable C compiler found in $PATH
-      - 해결법 : C 컴파일러 gcc 설치(apt-get install build-essential)
-   
-   2. error : xml/apr_xml.c:35:10: fatal error: expat.h : No such file or directory
-      - 해결법 : libexpat-dev 설치(apt-get install libexpat1-dev)
-   
-   3. error : Makefile:48: recipe for target 'htpasswd' failed
-      - 해결법 : apr-util 을 삭제하고 다시 설치
 -----
 
 6. Apache ↔ Tomcat 연동 환경 구성(mod_jk 연동)<이중화 Fail-over>

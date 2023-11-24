@@ -14,6 +14,7 @@
 
 ### 아마존 EC2의 경우 기본적으로 이렇게 ubuntu 22.04.3 LTS를 제공합니다.
 ### 저는 먼저 wasadmin이라는 계정을 만들어 보겠습니다.
+```
 - 우분투에서 wasadmin이라는 계정을 생성합니다
    - $ adduser wasadmin
 - 저는 지금 아마존 ec2를 사용하고 있기 때문에 이 만들어진 계정으로 접속하기 위해서는 keypair를 복사해 주어야 합니다.
@@ -22,6 +23,7 @@
    - $ chown -R wasadmin:wasadmin /home/wasadmin/.ssh   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5e21b6c9-bc5a-4121-9012-ece3c6fafdf0)   
 - cut -f1 -d: /etc/passwd 명령을 통해 wasadmin이라는 계정을 생성된 것을 확인할 수 있습니다
+```
    
 -----
 
@@ -78,9 +80,12 @@ export PATH
 -----
 
 
-3. Apache Tomcat 환경 구성(멀티 인스턴스 구축)   
-- Apache Tomcat 9.0.82를 사용하여 시스템 구축
+## 3. Apache Tomcat 환경 구성(멀티 인스턴스 구축)   
+### 이번에는 Apache Tomcat 9.0.82를 사용하여 시스템을 구축해보도록 하겠습니다.
 -----
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/3c5b196b-0747-477c-a61e-c651d1a921ca)
+
+- 우선 Tomcat을 홈페이지에서 다운받습니다.
 
 - instance1
 

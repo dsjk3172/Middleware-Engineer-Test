@@ -189,8 +189,7 @@ export PATH
 - 이번에는 위에서 설치한 톰캣으로 애플리케이션을 배포해보도록 하겠습니다.   
 샘플 애플리케이션은 https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/ 에서   
 배포하는 샘플 애플리케이션을 사용하도록 하겠습니다.
------
-
+   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/b2b3112d-9d70-444b-923b-aab4187c72b8)
 - 다운받은 sample.war을 /opt/tomcat/instance1/webapps 폴더에 ROOT.war이라는 이름으로 변경하여 넣어줍니다.
    

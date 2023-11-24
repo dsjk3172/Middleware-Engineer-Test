@@ -399,13 +399,13 @@ worker.balancer.sticky_session=TRUE
 /*=balancer
 ```
 
-- tomcat instance1의 server.xml의 일부
-
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F47d7d1f3-a435-43d3-8bf1-34e39c63b453%2FUntitled.png?table=block&id=8bfdb5b3-e114-4990-b89b-c86e9e73496e&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=610&userId=&cache=v2)
 
-- tomcat instance2의 server.xml의 일부
+- tomcat instance1의 server.xml과 workers.properties에 입력한 Tomcat1 설정값이 일치해야합니다.
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F74b88c5b-2f5c-44c4-ae5f-6d5d2d3c86da%2FUntitled.png?table=block&id=5290e9c1-daad-4898-b145-03b8eb2896fd&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=530&userId=&cache=v2)
+
+- tomcat instance2의 server.xml과 workers.properties에 입력한 Tomcat2 설정값이 일치해야합니다.
 -----
 
 연동 전 화면 :
@@ -417,6 +417,7 @@ worker.balancer.sticky_session=TRUE
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2Fd05b42bb-bf80-4257-be95-a66fde76b7d2%2FUntitled.png?table=block&id=4fc23672-fb77-44c9-a04d-d9d9c5b2a194&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
-- mod_jk 방식으로 Apache-Tomcat 상호연동
-- mod_jk 방식으로 이중화 구성
-- 로드밸런싱을 이용하여 두 개의 인스턴스 중 하나가 죽더라도 다른 하나가 실행중이라면 계속해서 실행됨
+- 연동에 성공했다면 주소를 입력하였을 때 8080포트나 9080포트를 입력하였을 때와 같은 화면이 출력됩니다.
+- 이렇게 로드밸런싱을 이용하여 구성하면 두 개의 인스턴스 중 하나가 죽더라도 다른 하나가 실행중이라면 계속해서 페이지에 접속이 가능합니다.
+
+### 수고하셨습니다.

@@ -18,7 +18,7 @@
    - adduser wasadmin
 - 저는 지금 아마존 ec2를 사용하고 있기 때문에 이 만들어진 계정으로 접속하기 위해서는 keypair를 복사해주어야 합니다.
    - cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/  
-   - chown -R wasadmin:wasadmin /home/wasadmin/.ssh
+   - chown -R wasadmin:wasadmin /home/wasadmin/.ssh   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5e21b6c9-bc5a-4121-9012-ece3c6fafdf0)   
 - cut -f1 -d: /etc/passwd 명령을 통해 wasadmin이라는 계정을 생성된 것을 확인할 수 있습니다
    

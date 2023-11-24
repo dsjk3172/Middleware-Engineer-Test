@@ -93,18 +93,30 @@ export PATH
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/162dd3cd-fb9e-4f29-85a0-c24c82f83307)
 
 - 추가하였다면 Exc 버튼을 누른 뒤 :wq를 입력하여 vim을 종료해주세요.
-- 위의 profile이 위의 사진처럼 되어야 합니다.
+- profile의 내용이 위의 사진처럼 되어야 합니다.
 
 ### 여기까지 했으면 JDK 설치는 완료되었습니다.
 -----
 
 
-## 3. Apache Tomcat 환경 구성(멀티 인스턴스 구축)   
+## 3. Apache Tomcat 환경 구성(멀티 인스턴스 구성)
 ### 이번에는 Apache Tomcat 9.0.82를 사용하여 시스템을 구축해보도록 하겠습니다.
------
+   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/3c5b196b-0747-477c-a61e-c651d1a921ca)
 
 - 우선 Tomcat을 홈페이지에서 다운받습니다.
+- 다운받은 Tomcat을 opt/tomcat/폴더에 압축해제하여 주세요.
+```
+   $ tar -zvxf (파일명)
+```
+- 압축해제한 폴더명을 임의의 폴더명으로 변경합니다. 저의 경우 instance1으로 변경해 주었습니다.
+```
+   $ mv (기존 파일명) (변경할 파일명)
+```
+- instance1을 복사하여 instance2를 만들어줍니다.
+```
+   $ copy -rp /opt/tomcat/instance1 /opt/tomcat/instance2
+```
 
 - instance1
 
@@ -114,8 +126,7 @@ export PATH
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F331f73c5-b277-4ac4-9457-e8539c9eb2a1%2FUntitled.png?table=block&id=c3ab33e1-317c-44de-b16a-efbbb64f881e&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
-- Instance1 Directory : /opt/tomcat/instance1/
-- Instance2 Directory : /opt/tomcat/instance2/
+- 위 사진들처럼 instance1과 instance2가 만들어졌다면 성공입니다.
 -----
 
 - 8080 포트로 접속한 화면

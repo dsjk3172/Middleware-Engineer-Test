@@ -216,6 +216,14 @@ export PATH
 ```
 
 ### 이제 패키지들을 하나씩 설치해봅시다.
+   
+- apr 설치
+```
+    - cd /opt/apache_package/apr-1.7.4
+    - ./configure --prefix=/opt/apr
+    - make
+    - make install
+```
 
 - apache-2.4.58 폴더
 

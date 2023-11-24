@@ -36,7 +36,10 @@
 - root 계정으로 접속합니다
    - $ su  
 - opt의 권한을 root에서 wasadmin으로 변경해줍니다.
-   - chown -R wasadmin:wasadmin /opt   
+   - chown -R wasadmin:wasadmin /opt
+
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/fc2b2e71-4d33-426b-9bab-49a93c56a1b5)
+- $ ls -l을 이용하면 이렇게 opt 폴더의 권한이 wasadmin으로 변경된 것을 확인할 수 있습니다.
 
 ### 권한을 변경해 줬으면 다시 JDK 설치로 돌아가겠습니다.
 
@@ -50,10 +53,22 @@
 
 - 그럼 이렇게 위 사진처럼 jdk가 설치된 것을 확인할 수 있습니다.
 
------
-![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/162dd3cd-fb9e-4f29-85a0-c24c82f83307)
+### 다음은 환경변수를 추가하는 과정입니다.
+### 이 과정을 거쳐야 리눅스 내에서 JDK를 인식하고 사용할 수 있습니다.
    
-- /etc/profile에 환경변수 추가
+- /etc/profile을 편집합니다.
+   - $ vim /etc/profile
+   
+JAVA_HOME=/opt/jdk-17.0.9
+JRE_HOME=/opt/jdk-17.0.9
+PATH=$PATH:$JRE_HOME/bin:$JAVA_HOME/bin
+
+export JAVA_HOME
+export JRE_HOME
+export PATH
+   
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/162dd3cd-fb9e-4f29-85a0-c24c82f83307)
+이 문장들을 profile에 입력해주세요.
 -----
 
 

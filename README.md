@@ -29,13 +29,25 @@
 ### 이번에는 Oracle JDK를 패키지를 사용하지 않고 수동으로 설치해 보겠습니다.
 ### 설치는 /opt/jdk-17.0.9/ 디렉토리에 설치하도록 하겠습니다.
 
+### 그 전에 우선 opt 폴더의 권한을 root에서 wasadmin으로 변경하겠습니다.
+### 이 과정은 나중에 권한 문제로 오류가 나는 걸 방지하기 위한 과정입니다.
+- root 권한을 획득합니다.
+   - su
+   - 비밀번호는 기본적으로 root로 설정되어 있을 것입니다. 
+- opt의 권한을 root에서 wasadmin으로 변경해줍니다.
+   - chown -R wasadmin:wasadmin /opt   
+
+### 권한을 변경해 줬으면 다시 JDK 설치로 돌아가겠습니다.
+
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/026d594e-7e36-46d3-9d38-5c313310e7f1)
 
-- 우선 Oracle 사이트에서 자바 JDK를 다운받습니다.
+- 우선 Oracle 사이트에서 자바 JDK를 다운받습니다. 위 사진은 제가 다운받은 파일입니다.
 - 다운받은 파일의 압축을 풉니다.
    - $ tar zxvf jdk-17_linux-x64_bin.tar.gz(파일명)
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F756ec067-c75b-4109-801f-9394871f99f9%2FUntitled.png?table=block&id=ceee6651-a153-44d2-836f-e6244eb625f6&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1740&userId=&cache=v2)
+
+- 그럼 이렇게 위 사진처럼 jdk가 설치된 것을 확인할 수 있습니다.
 
 -----
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/162dd3cd-fb9e-4f29-85a0-c24c82f83307)

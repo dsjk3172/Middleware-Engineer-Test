@@ -15,10 +15,10 @@
 ### 아마존 EC2의 경우 기본적으로 이렇게 ubuntu 22.04.3 LTS를 제공합니다.
 ### 저는 먼저 wasadmin이라는 계정을 만들어 보겠습니다.
 - 우분투에서 wasadmin이라는 계정을 생성합니다
-   - adduser wasadmin
+   - $ adduser wasadmin
 - 저는 지금 아마존 ec2를 사용하고 있기 때문에 이 만들어진 계정으로 접속하기 위해서는 keypair를 복사한 뒤 권한을 부여해 주어야 합니다.
-   - cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/  
-   - chown -R wasadmin:wasadmin /home/wasadmin/.ssh   
+   - $ cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/  
+   - $ chown -R wasadmin:wasadmin /home/wasadmin/.ssh   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5e21b6c9-bc5a-4121-9012-ece3c6fafdf0)   
 - cut -f1 -d: /etc/passwd 명령을 통해 wasadmin이라는 계정을 생성된 것을 확인할 수 있습니다
    
@@ -31,9 +31,10 @@
    
 그 전에 우선 opt 폴더의 권한을 root에서 wasadmin으로 변경하겠습니다.   
 이 과정은 나중에 권한 문제로 오류가 나는 걸 방지하기 위한 과정입니다.   
-- root 권한을 획득합니다.
-   - su
-   - 비밀번호는 기본적으로 root로 설정되어 있을 것입니다. 
+- root 계정의 비밀번호를 변경합니다.
+   - $ sudo passwd root   
+- root 계정으로 접속합니다
+   - $ su  
 - opt의 권한을 root에서 wasadmin으로 변경해줍니다.
    - chown -R wasadmin:wasadmin /opt   
 

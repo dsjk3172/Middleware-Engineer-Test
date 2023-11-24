@@ -357,14 +357,47 @@ JkLogStampFormat "[%a %b %d %H:%M:%S %Y]"
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F96884f31-5580-4131-b94b-f8ebeecb0598%2FUntitled.png?table=block&id=f78cf22f-388e-4ff6-8d33-5391c8ee178f&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=800&userId=&cache=v2)
 - 위 사진처럼 문장을 추가해줍니다.
+```
+#worker.list=tomcat1, tomcat2
+worker.list=balancer
+ps=/
+
+# Tomcat1
+# 아래 3개는 instance 1의 server.xml과 일치하여야 합니다.
+worker.tomcat1.type=ajp13
+worker.tomcat1.host=13.124.217.49
+worker.tomcat1.port=8009
+worker.tomcat1.lbfactor=1
+# lbfactor은 로드밸런싱 될 비율을 말합니다.
+worker.tomcat1.secret=your_pass
+
+# Tomcat2
+# 아래 3개는 instance 2의 server.xml과 일치하여야 합니다.
+worker.tomcat2.type=ajp13
+worker.tomcat2.host=13.124.217.49
+worker.tomcat2.port=9009
+worker.tomcat2.lbfactor=1
+# lbfactor은 로드밸런싱 될 비율을 말합니다.
+worker.tomcat2.secret=your_pass
+
+worker.balancer.type=lb
+# 로드밸런싱을 사용한다는 명령어입니다.
+worker.balancer.balance_workers=tomcat1, tomcat2
+worker.balancer.sticky_session=TRUE
+# 쿠키 또는 세션을 사용하여 트래픽을 분산하는 기능입니다.
+```
    
-### 이번에는 uriworkermap.properties 파일을 생성해줍니다.
+### 마지막으로 uriworkermap.properties 파일을 생성해줍니다.
 ```
    $ vim /opt/apache-2.4.58/conf/uriworkermap.properties
 ```
    
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/7fe99047-9852-43eb-a5fa-0bbff360d639)
 - 위 사진처럼 문장을 추가해줍니다.
+- 해당 uri 를 어느 인스턴스와 맵핑할 것인지 설정하는 파일입니다.
+```
+/*=balancer
+```
 
 - tomcat instance1의 server.xml의 일부
 

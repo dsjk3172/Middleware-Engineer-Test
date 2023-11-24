@@ -322,29 +322,49 @@ export PATH
   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/96876d08-f740-4a99-8f78-9dd29805bd44)
 - 위 사진처럼 아래 문장을 추가해주세요.
-   - 실행할 때 mod_jk.conf를 참고하라는 명령입니다.
+   - 로드할 때 mod_jk.conf를 참고하라는 명령입니다.
 ```
 <IfModule jk_module>
 include conf/mod_jk.conf
 </IfModule>
 ```
 
-### 여기까지 했으면 이제 mod_jk.conf를 생성해줍니다.
-- mod_jk.conf
+### 여기까지 했으면 이제 mod_jk.conf 파일을 생성해줍니다.
+```
+   $ vim /opt/apache-2.4.58/conf/mod_jk.conf
+```
    
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/2d9e3020-1725-40d1-9d3d-0106abc2c32b)
------
+- 위 사진처럼 문장을 추가해줍니다.
+```
+<IfModule mod_jk.c>
+#properties 파일들을 참조하라는 명령어입니다.
+JkWorkersFile conf/workers.properties
+JkMountFile conf/uriworkermap.properties
 
-- workers.properties
+#log를 생성하는 명령어입니다.
+JkLogFile logs/mod_jk.log
+JkShmFile logs/mod_jk.shm
+JkLogLevel info
+JkLogStampFormat "[%a %b %d %H:%M:%S %Y]"
+</IfModule>
+```
+
+### 이제 workers.properties 파일을 생성해줍니다.
+```
+   $ vim /opt/apache-2.4.58/conf/workers.properties
+```
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F96884f31-5580-4131-b94b-f8ebeecb0598%2FUntitled.png?table=block&id=f78cf22f-388e-4ff6-8d33-5391c8ee178f&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=800&userId=&cache=v2)
------
-
-- uriworkermap.properties
-
+- 위 사진처럼 문장을 추가해줍니다.
+   
+### 이번에는 uriworkermap.properties 파일을 생성해줍니다.
+```
+   $ vim /opt/apache-2.4.58/conf/uriworkermap.properties
+```
+   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/7fe99047-9852-43eb-a5fa-0bbff360d639)
-
------
+- 위 사진처럼 문장을 추가해줍니다.
 
 - tomcat instance1의 server.xml의 일부
 

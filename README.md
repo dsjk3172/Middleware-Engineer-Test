@@ -202,7 +202,7 @@ export PATH
 
 ## 5. Apache HTTP 환경 구성(컴파일 형태로 설치)
    
-이번에는 Apache HTTP 환경을 구성해보도록 하겠습니다.   
+### 이번에는 Apache HTTP 환경을 구성해보도록 하겠습니다.   
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F29ed0736-6ef6-4554-a2f3-96b24d93e175%2FUntitled.png?table=block&id=bd7c2942-b00c-4266-8597-f1912c614aba&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=310&userId=&cache=v2)
 

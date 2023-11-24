@@ -292,19 +292,24 @@ export PATH
 ### 마지막으로 Apache와 Tomcat을 연동하고 Fail-over 환경을 구성해보도록 하겠습니다.
    
 - 먼저 연동을 위한 mod_jk을 설치합니다.
-- https://tomcat.apache.org/download-connectors.cgi에서 mod_jk를 다운받은 뒤 압축을 해제해줍니다.
+- https://tomcat.apache.org/download-connectors.cgi 에서 mod_jk를 다운받은 뒤 압축을 해제해줍니다.
 ```
    $ tar -zvxf (파일명)
 ```
 - 압축해제한 파일을 configure 명령어를 이용해서 설치합니다.
 ```
-  - cd /home/wasdamin/tomcat-connectors-1.2.49-src/native
-  - ./configure --with-apxs=/opt/apache-2.4.58/bin/apxs
-  - make && make install
+   $ cd /home/wasdamin/tomcat-connectors-1.2.49-src/native
+   $ ./configure --with-apxs=/opt/apache-2.4.58/bin/apxs
+   $ make && make install
 ```
 -----
-
-- 설치된 모듈들
+     
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/7c7da78f-458f-44de-b010-ad4785d65a68)
+- 여기서 mod_jk.so가 있다면 설치에 성공한 것입니다.
+```
+   $ /opt/apache-2.4.58/modules/
+   $ ls
+```
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2Fa09ca6a3-a3d8-4a7c-aa8a-fcab9a739794%2FUntitled.png?table=block&id=0c6fddef-cb81-4b3a-8cf1-c8784ac2ace4&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1250&userId=&cache=v2)
 -----

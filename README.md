@@ -13,10 +13,10 @@
 ![제목 없음](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F43bfc1cc-6660-4007-8a8c-32d94dfeec3f%2FUntitled.png?table=block&id=9c211ec0-9d0a-492e-a029-b0d7110475b3&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1910&userId=&cache=v2)
 
 ### 아마존 EC2의 경우 기본적으로 이렇게 ubuntu 22.04.3 LTS를 제공합니다.
-### 저희는 먼저 wasadmin을 만들어 보겠습니다.
+### 저는 먼저 wasadmin이라는 계정을 만들어 보겠습니다.
 - 우분투에서 wasadmin이라는 계정을 생성합니다
    - adduser wasadmin
-- 저희는 지금 아마존 ec2를 사용하고 있기 때문에 이 만들어진 계정으로 접속하기 위해서는 keypair를 복사해주어야 합니다.
+- 저는 지금 아마존 ec2를 사용하고 있기 때문에 이 만들어진 계정으로 접속하기 위해서는 keypair를 복사해주어야 합니다.
    - cp -r /home/ubuntu/.ssh/  /home/wasadmin/.ssh/  
    - chown -R wasadmin:wasadmin /home/wasadmin/.ssh
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5e21b6c9-bc5a-4121-9012-ece3c6fafdf0)   

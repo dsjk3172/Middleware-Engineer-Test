@@ -173,14 +173,14 @@ export PATH
 -----
 ```
 - 인스턴트 시작
-    - /opt/tomcat/instance1/bin/startup.sh
-    - /opt/tomcat/instance2/bin/startup.sh
-    - /opt/apache-2.4.58/bin/httpd -k start
+    $ /opt/tomcat/instance1/bin/startup.sh
+    $ /opt/tomcat/instance2/bin/startup.sh
+    $ /opt/apache-2.4.58/bin/httpd -k start
 
 - 인스턴트 종료
-    - /opt/tomcat/instance1/bin/shutdown.sh
-    - /opt/tomcat/instance2/bin/shutdown.sh
-    - /opt/apache-2.4.58/bin/httpd -k stop
+    $ /opt/tomcat/instance1/bin/shutdown.sh
+    $ /opt/tomcat/instance2/bin/shutdown.sh
+    $ /opt/apache-2.4.58/bin/httpd -k stop
 ```
 -----
 
@@ -218,13 +218,34 @@ export PATH
 ### 이제 패키지들을 하나씩 설치해봅시다.
    
 - apr 설치
+   - apr은 apache portable runtime의 줄임말입니다.
+   - Http 서버의 핵심이며 휴대용 라이브러리로서 apr은 고급 IO기능에 대한 접근, OS수준의 기능, 기본 프로세스 처리 등의 용도로 사용됩니다.
+   - apache가 설치된 OS에 관계없이 일정한 동작을 하기 위해 필요한 라이브러리입니다.
 ```
-    - cd /opt/apache_package/apr-1.7.4
-    - ./configure --prefix=/opt/apr
-    - make
-    - make install
+    $ cd /opt/apache_package/apr-1.7.4
+    $ ./configure --prefix=/opt/apr
+    $ make
+    $ make install
 ```
-
+   
+- apr-util 설치
+   - uitl이란 운영체계에서 제공되는 것 외에 추가의 기능을 제공하는 작은 프로그램을 의미합니다.
+```
+    $ cd /opt/apache_package/apr-util-1.6.3
+    $ ./configure --with-apr=/opt/apr --prefix=/opt/apr-util 
+    $ make
+    $ make install
+```
+   
+- PCRE 설치
+   - PCRE은 Perl Compatible Regular Expressions의 줄임말입니다.
+   - 펄 호환 정규 표현식으로서, 정규식 패턴 일치를 구현하는 함수의 집합입니다.
+```
+    $ /opt/apache_package/pcre-8.45
+    $ ./configure --prefix=/opt/pcre
+    $ make
+    $ make install
+```
 - apache-2.4.58 폴더
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F46aa6b43-5450-4ae4-8134-ba9b6ccf9015%2FUntitled.png?table=block&id=deff3fa2-2401-48a5-a8e3-2afcc7095084&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1950&userId=&cache=v2)

@@ -3,14 +3,16 @@
 ## 들어가며
 안녕하세요. 신입 개발자 이시현입니다.
 이 페이지는 AWS EC2를 이용하여 미들웨어를 구축하는 과정을 설명한 페이지입니다.
+현재 만들어진 페이지는 [13.124.217.49](http://13.124.217.49/)로 접속 가능한 상태입니다.
 
 ## 1. Linux 기본 환경 구성
-   
+
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/a93150c0-d4ef-4f18-85f7-a9013fe8acaf)
 -----
-
+   
 ![제목 없음](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F43bfc1cc-6660-4007-8a8c-32d94dfeec3f%2FUntitled.png?table=block&id=9c211ec0-9d0a-492e-a029-b0d7110475b3&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1910&userId=&cache=v2)
-    
+
+### 아마존 EC2의 경우 기본적으로 이렇게 ubuntu 22.04.3 LTS를 제공합니다.
 - 환경: AWS EC2, ubuntu 22.04.3 LTS 사용
 - wasadmin 계정 사용
 - SSH 접속 터미널: MobaXterm

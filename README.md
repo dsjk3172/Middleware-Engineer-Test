@@ -192,7 +192,13 @@ export PATH
 -----
 
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/b2b3112d-9d70-444b-923b-aab4187c72b8)
-- The easiest way to run this application is simply to move the war file to your CATALINA_HOME/webapps directory
+- 다운받은 sample.war을 /opt/tomcat/instance1/webapps 폴더에 ROOT.war이라는 이름으로 변경하여 넣어줍니다.
+   
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5ddc15d9-0417-42a6-9ada-1d76c2a58c00)
+- instacne2에도 마찬가지로 다운받은 sample.war을 /opt/tomcat/instance2/webapps 폴더에 ROOT.war이라는 이름으로 변경하여 넣어줍니다.
+
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/c83bd565-704c-45f4-8c17-e3d8a1fdcba1)
+- 페이지를 열었을 때 이런 화면이 나오면 성공입니다.
 -----
 
 5. Apache HTTP 환경 구성(컴파일 형태로 설치)

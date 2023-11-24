@@ -28,7 +28,7 @@
    $ chown -R wasadmin:wasadmin /home/wasadmin/.ssh
 ```
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5e21b6c9-bc5a-4121-9012-ece3c6fafdf0)   
-- cut -f1 -d: /etc/passwd 명령을 통해 wasadmin이라는 계정을 생성된 것을 확인할 수 있습니다
+- wasadmin이라는 계정을 생성된 것을 확인할 수 있습니다
    
 -----
 

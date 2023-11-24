@@ -151,16 +151,25 @@ export PATH
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/96a52d77-fa72-41db-8863-e681df697014)
 
 - instance2의 경우 instance1과의 포트 충돌을 막기 위해 위 사진들처럼 기존 포트들에 모두 1000씩 더해주세요.
+-----
 
+### 이제 인스턴트들을 실행시켜 보도록 하겠습니다.
+
+- 인스턴트 시작
+```
+   $ /opt/tomcat/instance1/bin/startup.sh
+   $ /opt/tomcat/instance2/bin/startup.sh
+```
+   
+- 8080 포트로 접속한 화면
+   
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/43f1e40d-3e51-4ff9-8a2a-52fcb50a1323)
 
 - 9080 포트로 접속한 화면
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F94e12ae9-d5fd-4fc4-ab4f-1c6364e028c3%2FUntitled.png?table=block&id=62e40559-750b-48c3-a341-45aba229c9d2&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
 
-- Instance1은 HTTP 포트 8080, AJP 포트 8009로 구성
-- Instance2는 HTTP 포트 9080, AJP 포트 9009로 구성
-- AJP 포트에 관해서는 6번에서 자세히 설명
+### 위 사진들처럼 8080, 9080포트로 접속이 성공한다면 인스턴트 구축까지 완료된 것입니다.
 -----
 
 - 인스턴트 시작

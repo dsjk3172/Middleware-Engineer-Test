@@ -184,11 +184,10 @@ export PATH
 ```
 -----
 
-4. 샘플 애플리케이션 배포(애플리케이션 only)
+## 4. 샘플 애플리케이션 배포(애플리케이션 only)
 
-![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F86d1edca-7741-46d2-adad-42b24861154d%2FUntitled.png?table=block&id=d238b6db-d1ff-44a9-9c4e-6f4a4e6116c6&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=2000&userId=&cache=v2)
-
-- https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/ 에서 배포하는 샘플 애플리케이션을 사용
+### 이번에는 위에서 설치한 톰캣으로 애플리케이션을 배포해보도록 하겠습니다.
+### 샘플 애플리케이션은 https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/ 에서 배포하는 샘플 애플리케이션을 사용하도록 하겠습니다.
 -----
 
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/b2b3112d-9d70-444b-923b-aab4187c72b8)

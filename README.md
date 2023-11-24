@@ -246,6 +246,22 @@ export PATH
     $ make
     $ make install
 ```
+
+- 만약 이 과정에서 문제가 발생한다면 아래를 참고해주세요.
+  - error : no acceptable C compiler found in $PATH
+    - 해결법 : C 컴파일러 gcc 설치
+      ```
+         apt-get install build-essential
+      ```
+   - error : xml/apr_xml.c:35:10: fatal error: expat.h : No such file or directory
+    - 해결법 : C 컴파일러 gcc 설치
+      ```
+         apt-get install build-essential
+      ```
+   - error : libexpat-dev 설치(apt-get install libexpat1-dev)
+    - 해결법 : apr-util 을 삭제하고 다시 설치
+ 
+
 - apache-2.4.58 폴더
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F46aa6b43-5450-4ae4-8134-ba9b6ccf9015%2FUntitled.png?table=block&id=deff3fa2-2401-48a5-a8e3-2afcc7095084&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1950&userId=&cache=v2)
@@ -263,22 +279,6 @@ export PATH
 - Directory : /opt/apache-2.4.58
 -----
 
-- 설치 과정
-  - apr 설치
-    - cd /opt/apache_package/apr-1.7.4
-    - ./configure --prefix=/opt/apr
-    - make
-    - make install
-  - apr-util 설치
-    - cd /opt/apache_package/apr-util-1.6.3
-    - ./configure --with-apr=/opt/apr --prefix=/opt/apr-util 
-    - make
-    - make install
-  - PCRE 설치
-    - /opt/apache_package/pcre-8.45
-    - ./configure --prefix=/opt/pcre
-    - make
-    - make install
   - Apache HTTP 설치
     - $ cd /opt/apache_package/httpd-2.4.58/
     - ./configure --prefix=/opt/apache-2.4.58 \

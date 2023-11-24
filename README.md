@@ -27,12 +27,16 @@
 ## 2. JDK 환경 구성
 
 ### 이번에는 Oracle JDK를 패키지를 사용하지 않고 수동으로 설치해 보겠습니다.
-### 설치는 /opt 디렉토리에 설치합니다.
+### 설치는 /opt/jdk-17.0.9/ 디렉토리에 설치하도록 하겠습니다.
+
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/026d594e-7e36-46d3-9d38-5c313310e7f1)
+
+- 우선 Oracle 사이트에서 자바 JDK를 다운받습니다.
+- 다운받은 파일의 압축을 풉니다.
+   - $ tar zxvf jdk-17_linux-x64_bin.tar.gz(파일명)
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F756ec067-c75b-4109-801f-9394871f99f9%2FUntitled.png?table=block&id=ceee6651-a153-44d2-836f-e6244eb625f6&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1740&userId=&cache=v2)
 
-- Oracle JDK 17.0.9 버전 설치(패키지 설치 X)
-- Directory: /opt/jdk-17.0.9/
 -----
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/162dd3cd-fb9e-4f29-85a0-c24c82f83307)
    

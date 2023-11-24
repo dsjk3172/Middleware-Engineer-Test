@@ -196,8 +196,8 @@ export PATH
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/5ddc15d9-0417-42a6-9ada-1d76c2a58c00)
 - instacne2에도 마찬가지로 다운받은 sample.war을 /opt/tomcat/instance2/webapps 폴더에 ROOT.war이라는 이름으로 변경하여 넣어줍니다.
    
-![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/c83bd565-704c-45f4-8c17-e3d8a1fdcba1)
-- 페이지를 열었을 때 이런 화면이 나오면 성공입니다.
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/43f1e40d-3e51-4ff9-8a2a-52fcb50a1323)
+- 8080 포트로 접속했을 때 이런 화면이 나오면 성공입니다.
 -----
 
 ## 5. Apache HTTP 환경 구성(컴파일 형태로 설치)
@@ -260,36 +260,30 @@ export PATH
       ```
   - error : libexpat-dev 설치(apt-get install libexpat1-dev)
     - 해결법 : apr-util 을 삭제하고 다시 설치
- 
-
-- apache-2.4.58 폴더
-
-![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F46aa6b43-5450-4ae4-8134-ba9b6ccf9015%2FUntitled.png?table=block&id=deff3fa2-2401-48a5-a8e3-2afcc7095084&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1950&userId=&cache=v2)
-
-- opt 폴더
+   
+### 여기까지 진행했다면 이제 Apache HTTP 설치합니다.
+   
+- Apache HTTP 설치
+```
+    $ cd /opt/apache_package/httpd-2.4.58/
+    $ ./configure --prefix=/opt/apache-2.4.58 \
+    $ --enable-module=so --enable-rewrite --enable-so \
+    $ --with-apr=/opt/apr \
+    $ --with-apr-util=/opt/apr-util \
+    $ --with-pcre=/opt/pcre/bin/pcre-config \
+    $ --enable-mods-shared=all
+    $ make
+    $ make install
+```
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F6dcf6cb3-5f94-4d45-93e0-6a4e2d2309d1%2FUntitled.png?table=block&id=57bab663-b487-45ad-88fe-548711132c6f&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=270&userId=&cache=v2)
+- 여기까지 설치가 완료되었다면 opt 폴더는 위 사진처럼 되었을 겁니다.
 
-- Apache HTTP 환경 구성 결과
+![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F46aa6b43-5450-4ae4-8134-ba9b6ccf9015%2FUntitled.png?table=block&id=deff3fa2-2401-48a5-a8e3-2afcc7095084&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1950&userId=&cache=v2)
+- 설치가 완료된 apache-2.4.58 폴더
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2Fc899af29-8915-45ed-88c7-c7f6f4141a38%2FUntitled.png?table=block&id=48fe848a-5d4d-43da-8e13-71d0f97bf6b2&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=680&userId=&cache=v2)
-
-- Apache 2.4.58 version 설치
-- APR, PCRE와 같은 의존성 패키지는 /opt/에 설치
-- Directory : /opt/apache-2.4.58
------
-
-  - Apache HTTP 설치
-    - $ cd /opt/apache_package/httpd-2.4.58/
-    - ./configure --prefix=/opt/apache-2.4.58 \
-    - --enable-module=so --enable-rewrite --enable-so \
-    - --with-apr=/opt/apr \
-    - --with-apr-util=/opt/apr-util \
-    - --with-pcre=/opt/pcre/bin/pcre-config \
-    - --enable-mods-shared=all
-    - make
-    - make install
------
+- 페이지에 접속했을 때 이런 화면이 뜬다면 설치에 성공한 것입니다. 
 
 6. Apache ↔ Tomcat 연동 환경 구성(mod_jk 연동)<이중화 Fail-over>
 - mod_jk 컴파일 설치

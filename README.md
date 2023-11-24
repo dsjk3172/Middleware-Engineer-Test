@@ -54,7 +54,7 @@
    $ chown -R wasadmin:wasadmin /opt
 ```
 
-![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/fc2b2e71-4d33-426b-9bab-49a93c56a1b5)
+![image](https://github.com/dsjk3172/Middleware-Engineer-Test/assets/49221672/51637142-2191-47f5-b804-d1234449f1c1)
 - opt 폴더의 권한이 wasadmin으로 변경된 것을 확인할 수 있습니다.
 
 -----

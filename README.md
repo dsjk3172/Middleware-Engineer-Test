@@ -171,7 +171,7 @@ export PATH
 
 ### 위 사진들처럼 8080, 9080포트로 접속이 성공한다면 인스턴트 구축까지 완료된 것입니다.
 -----
-
+```
 - 인스턴트 시작
     - /opt/tomcat/instance1/bin/startup.sh
     - /opt/tomcat/instance2/bin/startup.sh
@@ -181,6 +181,7 @@ export PATH
     - /opt/tomcat/instance1/bin/shutdown.sh
     - /opt/tomcat/instance2/bin/shutdown.sh
     - /opt/apache-2.4.58/bin/httpd -k stop
+```
 -----
 
 4. 샘플 애플리케이션 배포(애플리케이션 only)

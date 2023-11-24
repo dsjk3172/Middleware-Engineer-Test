@@ -115,7 +115,7 @@ export PATH
 ```
 - instance1을 복사하여 instance2를 만들어줍니다.
 ```
-   $ copy -rp /opt/tomcat/instance1 /opt/tomcat/instance2
+   $ cp -rp /opt/tomcat/instance1 /opt/tomcat/instance2
 ```
 
 - instance1

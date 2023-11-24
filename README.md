@@ -264,6 +264,8 @@ export PATH
 ### 여기까지 진행했다면 이제 Apache HTTP 설치합니다.
    
 - Apache HTTP 설치
+   - --prefix=는 패키지가 설치될 경로를 지정하는 명령어입니다.
+   - --with-***=은 설치한 의존성 패키지의 경로를 지정하는 명령어입니다.
 ```
     $ cd /opt/apache_package/httpd-2.4.58/
     $ ./configure --prefix=/opt/apache-2.4.58 \
@@ -279,18 +281,27 @@ export PATH
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F6dcf6cb3-5f94-4d45-93e0-6a4e2d2309d1%2FUntitled.png?table=block&id=57bab663-b487-45ad-88fe-548711132c6f&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=270&userId=&cache=v2)
 - 여기까지 설치가 완료되었다면 opt 폴더는 위 사진처럼 되었을 겁니다.
 
-![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2F46aa6b43-5450-4ae4-8134-ba9b6ccf9015%2FUntitled.png?table=block&id=deff3fa2-2401-48a5-a8e3-2afcc7095084&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=1950&userId=&cache=v2)
+![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/d3952855-fcbf-498d-a6d0-f698fbeca288)
 - 설치가 완료된 apache-2.4.58 폴더
 
 ![Untitled](https://skylee22.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F16110c6b-1cea-4e64-8902-8ea5643d5ee1%2Fc899af29-8915-45ed-88c7-c7f6f4141a38%2FUntitled.png?table=block&id=48fe848a-5d4d-43da-8e13-71d0f97bf6b2&spaceId=16110c6b-1cea-4e64-8902-8ea5643d5ee1&width=680&userId=&cache=v2)
 - 페이지에 접속했을 때 이런 화면이 뜬다면 설치에 성공한 것입니다. 
 
-6. Apache ↔ Tomcat 연동 환경 구성(mod_jk 연동)<이중화 Fail-over>
-- mod_jk 컴파일 설치
-  - configure 명령어를 이용해서 make 파일 생성
+## 6. Apache ↔ Tomcat 연동 환경 구성(mod_jk 연동)<이중화 Fail-over>
+   
+### 마지막으로 Apache와 Tomcat을 연동하고 Fail-over 환경을 구성해보도록 하겠습니다.
+   
+- 먼저 연동을 위한 mod_jk을 설치합니다.
+- https://tomcat.apache.org/download-connectors.cgi에서 mod_jk를 다운받은 뒤 압축을 해제해줍니다.
+```
+   $ tar -zvxf (파일명)
+```
+- 압축해제한 파일을 configure 명령어를 이용해서 설치합니다.
+```
   - cd /home/wasdamin/tomcat-connectors-1.2.49-src/native
   - ./configure --with-apxs=/opt/apache-2.4.58/bin/apxs
   - make && make install
+```
 -----
 
 - 설치된 모듈들

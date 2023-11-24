@@ -40,14 +40,20 @@
 그 전에 우선 opt 폴더의 권한을 root에서 wasadmin으로 변경하겠습니다.   
 이 과정은 나중에 권한 문제로 오류가 나는 걸 방지하기 위한 과정입니다.   
 - root 계정의 비밀번호를 변경합니다.
-   - $ sudo passwd root   
+```
+   $ sudo passwd root
+```
 - root 계정으로 접속합니다
-   - $ su  
+```
+   $ su
+```
 - opt의 권한을 root에서 wasadmin으로 변경해줍니다.
-   - chown -R wasadmin:wasadmin /opt
+```
+   $ chown -R wasadmin:wasadmin /opt
+```
 
 ![image](https://github.com/dsjk3172/Open-Source-Consulting/assets/49221672/fc2b2e71-4d33-426b-9bab-49a93c56a1b5)
-- $ ls -l을 이용하면 이렇게 opt 폴더의 권한이 wasadmin으로 변경된 것을 확인할 수 있습니다.
+- opt 폴더의 권한이 wasadmin으로 변경된 것을 확인할 수 있습니다.
 
 -----
 ### 권한을 변경해 줬으면 다시 JDK 설치로 돌아가겠습니다.
